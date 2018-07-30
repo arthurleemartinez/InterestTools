@@ -6,14 +6,12 @@ def restart_program():
     saving data) must be done before calling this function."""
     python = sys.executable
     os.execl(python, python, * sys.argv)
-
 # Initialize User Interface
 print "This program will ask you a few basic questions about your credit line in order to show you the real impact of your interest rates and spending habits."
 statementBalancesString = raw_input("Please enter a list of 3 or more of your most recent statement balances.")
 cardName = raw_input("Please enter your card name (e.g. Mastercard).")
 # Figure out user's spending limit
 spendingLimit = int(raw_input("What is your card's spending limit in dollars?"))
-
 # Function for terminal's user interface
 def APR():
     percentage = raw_input("What is your current annual APR?")
