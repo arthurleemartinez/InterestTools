@@ -33,8 +33,8 @@ class CreditAccount:
         self.spendingLimit = spendingLimit
 # Create and store instance of user's individual card line 
 creditAccount_1 = CreditAccount(cardName, user_APR, AvgUtilization, spendingLimit)
-"""This function will display and ask for confirmation regarding user's individual credit card line. If the  
-information was correct, the componenets are cleared to be used in the next python script: "RealInterestCosts.py""""
+#This function will display and ask for confirmation regarding user's individual credit card line. If the  
+#information was correct, the componenets are cleared to be used in the next python script: "RealInterestCosts.py"
 def confirmation(CreditAccount_1):
     print "Reviewing your credit line information..."  
     print "Credit Card Name: %s" % cardName
