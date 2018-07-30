@@ -7,7 +7,7 @@ def restart_program():
     python = sys.executable
     os.execl(python, python, * sys.argv)
 # Initialize User Interface
-print "This program will ask you a few basic questions about your credit line in order to show you the real impact of your interest rates and spending habits."
+print("This program will ask you a few basic questions about your credit line in order to show you the real impact of your interest rates and spending habits.")
 statementBalancesString = input("Please enter a list of 3 or more of your most recent statement balances.")
 cardName = input("Please enter your card name (e.g. Mastercard).")
 # Figure out user's spending limit
@@ -39,18 +39,18 @@ creditAccount_1 = CreditAccount(cardName, user_APR, user_AvgUtilization, spendin
 #This function will display and ask for confirmation regarding user's individual credit card line. If the  
 #information was correct, the componenets are cleared to be used in the next python script: "RealInterestCosts.py"
 def confirmation():
-    print "Reviewing your credit line information..."  
-    print "Credit Card Name: %s" % cardName
-    print "Spending Limit: %d" % spendingLimit
-    print "Your APR: %d" % user_APR
+    print("Reviewing your credit line information...")  
+    print("Credit Card Name: %s" % cardName)
+    print("Spending Limit: %d" % spendingLimit)
+    print("Your APR: %d" % user_APR)
     confirmation_answer = input("Is this information correct? (Answer y or n)")
     if (confirmation_answer == "y"):
         boolean_answer = True
     else:
         boolean_answer = False
     if boolean_answer == False:
-        print "Restarting shell.."
+        print("Restarting shell..")
         restart_program()
     else:
-        print "Your information will now be used to calculate certain information about your interest costs."
+        print("Your information will now be used to calculate certain information about your interest costs.")
     return boolean_answer
