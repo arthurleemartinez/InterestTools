@@ -11,8 +11,8 @@ spendingLimit = float(input("What is your card's spending limit in dollars?"))
 def APR():
     percentage = input("What is your current annual APR?")
     decimalString = percentage
-    float1 = float(decimalString)
-    return float1
+    intfloat1 = round(int(float(decimalString)), 2)
+    return intfloat1
 # Function that determines your average utilization using prior statements
 def AvgUtilization():
     statementBalances = []
@@ -56,5 +56,6 @@ def restart_program():
     #saving data) must be done before calling this function.
     python = sys.executable
     os.execl(python, python, * sys.argv)
-print ("Your average utilization rate is: $%d") % user_AvgUtilization
-confirmation(creditAccount_1)
+message = "Your average utilization rate is"
+print(message, user_AvgUtilization)
+confirmation()
