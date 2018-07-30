@@ -1,11 +1,5 @@
 import sys
 import os
-def restart_program():
-    """Restarts the current program.
-    Note: this function does not return. Any cleanup action (like
-    saving data) must be done before calling this function."""
-    python = sys.executable
-    os.execl(python, python, * sys.argv)
 # Initialize User Interface
 print("This program will ask you a few basic questions about your credit line in order to show you the real impact of your interest rates and spending habits.")
 statementBalancesString = input("Please enter a list of 3 or more of your most recent statement balances.")
@@ -54,3 +48,9 @@ def confirmation():
     else:
         print("Your information will now be used to calculate certain information about your interest costs.")
     return boolean_answer
+def restart_program():
+    """Restarts the current program.
+    Note: this function does not return. Any cleanup action (like
+    saving data) must be done before calling this function."""
+    python = sys.executable
+    os.execl(python, python, * sys.argv)
