@@ -86,10 +86,10 @@ message3 = message3function()
 print(message, (100*user_AvgUtilization), message2, message3)
 # Interest related functions
 class Interest:
-    monthly_apr = user_APR / 12
-    monthly_interest = monthly_apr * (user_AvgUtilization * spendingLimit)
-    monthly_interest_string = str(monthly_interest)
     def display():
+        monthly_apr = user_APR / 12
+        monthly_interest = monthly_apr * (user_AvgUtilization * spendingLimit)
+        monthly_interest_string = str(monthly_interest)
         message4 = "If you maintain these spending habbits, you will be spending approximately"
         message5 = monthly_interest_string
         message6 = "dollars per month on interest alone."
