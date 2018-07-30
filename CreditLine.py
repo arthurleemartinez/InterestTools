@@ -92,5 +92,5 @@ class Interest:
         message4 = "If you maintain these spending habbits, you will be spending approximately"
         message5 = "$" + str(monthly_interest)
         message6 = "per month on interest alone."
-        print(message4, message5, message 6)
+        print(message4, message5, message6)
 Interest.display()
