@@ -6,10 +6,14 @@ def restart_program():
     saving data) must be done before calling this function."""
     python = sys.executable
     os.execl(python, python, * sys.argv)
+
 # Initialize User Interface
 print "This program will ask you a few basic questions about your credit line in order to show you the real impact of your interest rates and spending habits."
 statementBalancesString = raw_input("Please enter a list of 3 or more of your most recent statement balances.")
 cardName = raw_input("Please enter your card name (e.g. Mastercard).")
+# Figure out user's spending limit
+spendingLimit = int(raw_input("What is your card's spending limit in dollars?"))
+
 # Function for terminal's user interface
 def APR():
     percentage = raw_input("What is your current annual APR?")
@@ -18,22 +22,22 @@ def APR():
     return float1
 # Function that determines your average utilization using prior statements
 def AvgUtilization():
-    
     statementBalances = map(int, statementBalancesString.split(','))
     avgStatementBalance = (sum(statementBalances) / len(statementBalances))
-# Assign variable to value of APR() function call
+    avgutilization1 = avgStatementBalance/spendingLimit
+    return avgutlization1
+# Assign variables to value of function calls
 user_APR = APR()
-# Figure out user's spending limit
-spendingLimit = int(raw_input("What is your card's spending limit in dollars?"))
+user_AvgUtilization = AvgUtilization()
 # Change these values depending on the credit card's factors
 class CreditAccount:
-    def __init__(self, cardName, user_APR, AvgUtilization, spendingLimit):
+    def __init__(self, cardName, user_APR, user_AvgUtilization, spendingLimit):
         self.cardName = cardName
         self.user_APR = user_APR
-        self.AvgUtilization = AvgUtilization
+        self.user_AvgUtilization = user_AvgUtilization
         self.spendingLimit = spendingLimit
 # Create and store instance of user's individual card line 
-creditAccount_1 = CreditAccount(cardName, user_APR, AvgUtilization, spendingLimit)
+creditAccount_1 = CreditAccount(cardName, user_APR, user_AvgUtilization, spendingLimit)
 #This function will display and ask for confirmation regarding user's individual credit card line. If the  
 #information was correct, the componenets are cleared to be used in the next python script: "RealInterestCosts.py"
 def confirmation(CreditAccount_1):
