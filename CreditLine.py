@@ -61,7 +61,7 @@ def get_utilization_score(user_AvgUtilization):
         utilization_score = "good"
     elif user_AvgUtilization <= 0.10:
         utilization_score = "excellent"
-    return utilization_score
+    return utilization_score    
 def restart_program():
     #Restarts the current program. Note: this function does not return. Any cleanup action (like
     #saving data) must be done before calling this function.
@@ -82,4 +82,15 @@ def message3function():
         message3var = "(poor)."
     return message3var
 message3 = message3function()
+# display the custom rating and message about utilization
 print(message, (100*user_AvgUtilization), message2, message3)
+# Interest related functions
+class Interest:
+    monthly_apr = user_APR / 12
+    monthly_interest = monthly_apr * (user_AvgUtilization * spendingLimit)
+    def display():
+        message4 = "If you maintain these spending habbits, you will be spending approximately"
+        message5 = "$" + str(monthly_interest)
+        message6 = "per month on interest alone."
+        print(message4, message5, message 6)
+Interest.display()
