@@ -4,12 +4,12 @@ import os
 print("This program will ask you a few basic questions about your credit line in order to show you the real impact of your interest rates and spending habits.")
 statementBalancesString = input("Please enter a list of 3 or more of your most recent statement balances.")
 statementBalances = []
-cardName = input("Please enter your card name (e.g. Mastercard).")
+cardName = input("Please enter your card name (e.g. Mastercard)." )
 # Figure out user's spending limit
-spendingLimit = float(input("What is your card's spending limit in dollars?"))
+spendingLimit = float(input("What is your card's spending limit in dollars?" ))
 # Function for terminal's user interface
 def APR():
-    percentage = input("What is your current annual APR?")
+    percentage = input("What is your current annual APR?" )
     decimalString = percentage
     float1 = float(decimalString)
     return float1
@@ -83,12 +83,12 @@ def message3function():
     return message3var
 message3 = message3function()
 # display the custom rating and message about utilization
-print(message, (100*user_AvgUtilization), message2, message3)
+print(message, round((100*user_AvgUtilization), 2), message2, message3)
 # Interest related functions
 class Interest:
     def display():
         monthly_apr = user_APR / 12
-        monthly_interest = monthly_apr * (user_AvgUtilization * spendingLimit) / 100
+        monthly_interest = round((monthly_apr * (user_AvgUtilization * spendingLimit) / 100) , 2)
         monthly_interest_string = str(monthly_interest)
         message4 = "If you maintain these spending habbits, you will be spending approximately"
         message5 = monthly_interest_string
