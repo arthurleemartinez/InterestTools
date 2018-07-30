@@ -11,7 +11,7 @@ spendingLimit = float(input("What is your card's spending limit in dollars?"))
 def APR():
     percentage = input("What is your current annual APR?")
     decimalString = percentage
-    float1 = int(decimalString)
+    float1 = float(decimalString)
     return float1
 # Function that determines your average utilization using prior statements
 def AvgUtilization():
@@ -31,12 +31,12 @@ class CreditAccount:
         self.user_APR = user_APR
         self.user_AvgUtilization = user_AvgUtilization
         self.spendingLimit = spendingLimit
-# Create and store instance of user's individual card line 
+# Create and store instance of user's individual card line
 creditAccount_1 = CreditAccount(cardName, user_APR, user_AvgUtilization, spendingLimit)
 #This function will display and ask for confirmation regarding user's individual credit card line. If the
 #information was correct, the components are cleared to be used in the next python script: "RealInterestCosts.py"
 def confirmation():
-    print("Reviewing your credit line information...")  
+    print("Reviewing your credit line information...")
     print("Credit Card Name: %s" % cardName)
     print("Spending Limit: %d" % spendingLimit)
     print("Your APR: %d" % user_APR)
