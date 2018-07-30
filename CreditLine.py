@@ -53,14 +53,14 @@ def confirmation():
     return boolean_answer
 # Determine the quality of your utilization rate
 def get_utilization_score(user_AvgUtilization):
-    if user_AvgUtilization < 0.10:
-        utilization_score = excellent
-    elif user_AvgUtilization < 0.30:
-        utilization_score = good
-    elif user_AvgUtilization < 0.60:
-        utilization_score = average
-    elif user_AvgUtilization < 1:
+    if user_AvgUtilization > 0.60:
         utilization_score = poor
+    elif user_AvgUtilization <= 0.60:
+        utilization_score = average
+    elif user_AvgUtilization <= 0.30:
+        utilization_score = good
+    elif user_AvgUtilization <= 0.10:
+        utilization_score = excellent
     return utilization_score
 def restart_program():
     #Restarts the current program. Note: this function does not return. Any cleanup action (like
