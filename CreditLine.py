@@ -6,7 +6,6 @@ def restart_program():
     saving data) must be done before calling this function."""
     python = sys.executable
     os.execl(python, python, * sys.argv)
-    
 # Initialize User Interface
 print "This program will ask you a few basic questions about your credit line in order to show you the real impact of your interest rates and spending habits."
 # Function for terminal's user interface
@@ -32,10 +31,8 @@ class CreditAccount:
         self.user_APR = user_APR
         self.AvgUtilization = AvgUtilization
         self.spendingLimit = spendingLimit
-    
 # Create and store instance of user's individual card line 
 creditAccount_1 = CreditAccount(cardName, user_APR, AvgUtilization, spendingLimit)
-
 """This function will display and ask for confirmation regarding user's individual credit card line. If the  
    information was correct, the componenets are cleared to be used in the next python script: "RealInterestCosts.py""""
 def confirmation(CreditAccount_1):
@@ -51,12 +48,3 @@ def confirmation(CreditAccount_1):
     if boolean_answer = False:
         print "Restarting shell.."
         restart_program()
-        
-
-if __name__ == "__main__":
-    answer = raw_input("Do you want to restart this program ? ")
-    if answer.lower().strip() in "y yes".split():
-        
-        
-    
-    Your credit line information: creditAccount_1
