@@ -72,13 +72,13 @@ confirmation()
 message = "Your average utilization rate is"
 message2 = "percent "
 def message3function():
-    if utilization_score == "excellent":
+    if get_utilization_score(user_AvgUtilization) == "excellent":
         message3var = "(excellent)."
-    elif utilization_score == "good":
+    elif get_utilization_score(user_AvgUtilization) == "good":
         message3var = "(good)."
-    elif utilization_score == "average":
+    elif get_utilization_score(user_AvgUtilization) == "average":
         message3var = "(average)."
-    elif utilization_score == "poor":
+    elif get_utilization_score(user_AvgUtilization) == "poor":
         message3var = "(poor)."
     return message3var
 message3 = message3function()
