@@ -1,15 +1,16 @@
 # Begin Terminal's User Interface
 def APR():
-    percentage = (raw_input("What is your current annual APR?")
-    decimal1 = (percentage.strip(["%"])):
-    float1 = int(decimal)
+    percentage = raw_input("What is your current annual APR?")
+    decimalString = (percentage.strip(["%"])):
+    float1 = int(decimalString)
+user_APR = APR()
     
 
 # Change these values depending on the credit card's factors
 class CreditAccount:
-    def __init__(self, cardName, APR(), AvgUtilization, spendingLimit):
+    def __init__(self, cardName, user_APR, AvgUtilization, spendingLimit):
         self.cardName = cardName
-        self.APR = APR()
+        self.APR = user_APR
         self.AvgUtilization = AvgUtilization
         self.spendingLimit = spendingLimit
        
