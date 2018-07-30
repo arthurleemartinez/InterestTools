@@ -8,13 +8,13 @@ def restart_program():
     os.execl(python, python, * sys.argv)
 # Initialize User Interface
 print "This program will ask you a few basic questions about your credit line in order to show you the real impact of your interest rates and spending habits."
-statementBalancesString = raw_input("Please enter a list of 3 or more of your most recent statement balances.")
-cardName = raw_input("Please enter your card name (e.g. Mastercard).")
+statementBalancesString = input("Please enter a list of 3 or more of your most recent statement balances.")
+cardName = input("Please enter your card name (e.g. Mastercard).")
 # Figure out user's spending limit
-spendingLimit = int(raw_input("What is your card's spending limit in dollars?"))
+spendingLimit = int(input("What is your card's spending limit in dollars?"))
 # Function for terminal's user interface
 def APR():
-    percentage = raw_input("What is your current annual APR?")
+    percentage = input("What is your current annual APR?")
     decimalString = (percentage.strip(["%"]))
     float1 = int(decimalString)
     return float1
@@ -43,7 +43,7 @@ def confirmation():
     print "Credit Card Name: %s" % cardName
     print "Spending Limit: %d" % spendingLimit
     print "Your APR: %d" % user_APR
-    confirmation_answer = raw_input("Is this information correct? (Answer y or n)")
+    confirmation_answer = input("Is this information correct? (Answer y or n)")
     if (confirmation_answer == "y"):
         boolean_answer = True
     else:
