@@ -10,7 +10,7 @@ def APR():
 def AvgUtilization():
     statementBalancesString = raw_input("Please enter a list of 3 or more of your most recent statement balances.")
     statementBalances = map(int, statementBalancesString.split(','))
-    avgStatementBalance = sum(statementBalances) / len(statementBalances)
+    avgStatementBalance = (sum(statementBalances) / len(statementBalances))
 # Assign variable to value of APR() function call
 user_APR = APR()
 # Figure out user's spending limit
