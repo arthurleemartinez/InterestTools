@@ -25,7 +25,7 @@ def AvgUtilization():
     statementBalances = map(int, statementBalancesString.split(','))
     avgStatementBalance = (sum(statementBalances) / len(statementBalances))
     avgutilization1 = avgStatementBalance/spendingLimit
-    return avgutlization1
+    return avgutilization1
 # Assign variables to value of function calls
 user_APR = APR()
 user_AvgUtilization = AvgUtilization()
