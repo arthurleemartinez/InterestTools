@@ -36,14 +36,12 @@ creditAccount_1 = CreditAccount(cardName, user_APR, user_AvgUtilization, spendin
 #This function will display and ask for confirmation regarding user's individual credit card line. If the
 #information was correct, the components are cleared to be used in the next python script: "RealInterestCosts.py"
 def confirmation():
-    monthly_apr = user_APR/12
     print("Reviewing your credit line information...")
     print("Credit Card Name: %s" % cardName)
     print("Spending Limit: %d" % spendingLimit)
     print("Your APR: %d" % user_APR)
-    print("Your monthly APR: %d monthly_apr)
     confirmation_answer = input("Is this information correct? (Answer y or n)")
-    if confirmation_answer == "y":
+    if confirmation_answer == "y" or "Y":
         boolean_answer = True
     else:
         boolean_answer = False
