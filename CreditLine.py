@@ -5,7 +5,7 @@ print("This program will ask you a few basic questions about your credit line in
 statementBalancesString = input("Please enter a list of 3 or more of your most recent statement balances.")
 cardName = input("Please enter your card name (e.g. Mastercard).")
 # Figure out user's spending limit
-spendingLimit = int(input("What is your card's spending limit in dollars?"))
+spendingLimit = float(input("What is your card's spending limit in dollars?"))
 # Function for terminal's user interface
 def APR():
     percentage = input("What is your current annual APR?")
