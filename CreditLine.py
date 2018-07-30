@@ -11,8 +11,8 @@ spendingLimit = float(input("What is your card's spending limit in dollars?"))
 def APR():
     percentage = input("What is your current annual APR?")
     decimalString = percentage
-    intfloat1 = round(int(float(decimalString)), 2)
-    return intfloat1
+    float1 = float(decimalString)
+    return float1
 # Function that determines your average utilization using prior statements
 def AvgUtilization():
     statementBalances = []
