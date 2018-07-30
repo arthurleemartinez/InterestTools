@@ -81,5 +81,5 @@ def message3function():
     elif utilization_score == poor:
         message3var = "(poor)."
     return message3var
-message3 = message3var
+message3 = message3function()
 print(message, (100*user_AvgUtilization), message2, message3)
