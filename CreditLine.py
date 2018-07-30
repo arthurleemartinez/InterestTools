@@ -54,13 +54,13 @@ def confirmation():
 # Determine the quality of your utilization rate
 def get_utilization_score(user_AvgUtilization):
     if user_AvgUtilization > 0.60:
-        utilization_score = poor
+        utilization_score = "poor"
     elif user_AvgUtilization <= 0.60:
-        utilization_score = average
+        utilization_score = "average"
     elif user_AvgUtilization <= 0.30:
-        utilization_score = good
+        utilization_score = "good"
     elif user_AvgUtilization <= 0.10:
-        utilization_score = excellent
+        utilization_score = "excellent"
     return utilization_score
 def restart_program():
     #Restarts the current program. Note: this function does not return. Any cleanup action (like
@@ -72,13 +72,13 @@ confirmation()
 message = "Your average utilization rate is"
 message2 = "percent "
 def message3function():
-    if utilization_score == excellent:
+    if utilization_score == "excellent":
         message3var = "(excellent)."
-    elif utilization_score == good:
+    elif utilization_score == good":
         message3var = "(good)."
-    elif utilization_score == average:
+    elif utilization_score == "average":
         message3var = "(average)."
-    elif utilization_score == poor:
+    elif utilization_score == "poor":
         message3var = "(poor)."
     return message3var
 message3 = message3function()
