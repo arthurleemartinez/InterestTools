@@ -57,5 +57,6 @@ def restart_program():
     python = sys.executable
     os.execl(python, python, * sys.argv)
 message = "Your average utilization rate is"
-print(message, (100*user_AvgUtilization), "percent"."
+message2 = "percent."
+print(message, (100*user_AvgUtilization), message2)
 confirmation()
