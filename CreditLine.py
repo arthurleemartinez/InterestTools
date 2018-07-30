@@ -11,8 +11,8 @@ print "This program will ask you a few basic questions about your credit line in
 # Function for terminal's user interface
 cardName = raw_input("Please enter your card name (e.g. Mastercard).")
 def APR():
-    percentage = raw_input("What is your current annual APR?")
-    decimalString = (percentage.strip(["%"])):
+    percentage1 = raw_input("What is your current annual APR?")
+    decimalString = (percentage1.strip(["%"])):
     float1 = int(decimalString)
     return float1
 # Function that determines your average utilization using prior statements
