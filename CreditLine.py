@@ -10,7 +10,7 @@ def APR():
 user_APR = APR()
 # Figure out user's spending limit
 spendingLimit = int(raw_input("What is your spending limit in dollars?"))
-# Tell the user what to type 
+
 # Change these values depending on the credit card's factors
 class CreditAccount:
     def __init__(self, cardName, user_APR, AvgUtilization, spendingLimit):
@@ -27,6 +27,6 @@ class Statements:
     # Function that determines your average utilization using prior statements
 
 # Create and store instance of user's individual card line 
-creditAccount_1 = CreditAccount("Discover", 24.74%", )
+creditAccount_1 = CreditAccount("Discover", user_APR,  )
 # Display user's individual card line
 print creditAccount_1
