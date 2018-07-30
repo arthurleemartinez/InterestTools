@@ -45,7 +45,7 @@ def confirmation(CreditAccount_1):
         boolean_answer = True
     else:
         boolean_answer = False
-    if boolean_answer = False:
+    if boolean_answer == False:
         print "Restarting shell.."
         restart_program()
     else:
