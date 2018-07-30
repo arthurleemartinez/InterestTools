@@ -2,7 +2,7 @@ import sys
 import os
 # Initialize User Interface
 print("This program will ask you a few basic questions about your credit line in order to show you the real impact of your interest rates and spending habits.")
-statementBalancesString = input("Please enter a list of 3 or more of your most recent statement balances.")
+statementBalancesString = input("Please enter a list of 3 or more of your most recent statement balances. ")
 statementBalances = []
 cardName = input("Please enter your card name (e.g. Mastercard). ")
 # Figure out user's spending limit
