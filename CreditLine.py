@@ -56,3 +56,5 @@ def restart_program():
     #saving data) must be done before calling this function.
     python = sys.executable
     os.execl(python, python, * sys.argv)
+print ("Your average utilization rate is: $%d") % user_AvgUtilization
+confirmation(creditAccount_1)
