@@ -10,7 +10,7 @@ spendingLimit = float(input("What is your card's spending limit in dollars?"))
 # Function for terminal's user interface
 def APR():
     percentage = input("What is your current annual APR?")
-    decimalString = (percentage.strip(["%"]))
+    decimalString = percentage
     float1 = int(decimalString)
     return float1
 # Function that determines your average utilization using prior statements
