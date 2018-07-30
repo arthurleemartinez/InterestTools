@@ -56,7 +56,10 @@ def restart_program():
     #saving data) must be done before calling this function.
     python = sys.executable
     os.execl(python, python, * sys.argv)
-message = "Your average utilization rate is"
-message2 = "percent."
-print(message, (100*user_AvgUtilization), message2)
 confirmation()
+message = "Your average utilization rate is"
+message2 = "percent"
+def message3function():
+    if 
+message3 = message3var
+print(message, (100*user_AvgUtilization), message2)
