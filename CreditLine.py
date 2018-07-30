@@ -67,9 +67,17 @@ def restart_program():
     python = sys.executable
     os.execl(python, python, * sys.argv)
 confirmation()
+# basic apparatus that customizes rating display
 message = "Your average utilization rate is"
-message2 = "percent"
+message2 = "percent "
 def message3function():
-    if 
+    if utilization_score == excellent:
+        message3var = "(excellent)."
+    elif utilization_score == good:
+        message3var = "(good)."
+    elif utilization_score == average:
+        message3var = "(average)."
+    elif utilization_score == poor:
+        message3var = "(poor)."
 message3 = message3var
-print(message, (100*user_AvgUtilization), message2)
+print(message, (100*user_AvgUtilization), message2, message3)
