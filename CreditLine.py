@@ -3,6 +3,7 @@ import os
 # Initialize User Interface
 print("This program will ask you a few basic questions about your credit line in order to show you the real impact of your interest rates and spending habits.")
 statementBalancesString = input("Please enter a list of 3 or more of your most recent statement balances.")
+statementBalances = []
 cardName = input("Please enter your card name (e.g. Mastercard).")
 # Figure out user's spending limit
 spendingLimit = float(input("What is your card's spending limit in dollars?"))
@@ -14,7 +15,9 @@ def APR():
     return float1
 # Function that determines your average utilization using prior statements
 def AvgUtilization():
-    statementBalances = map(int, statementBalancesString.split(','))
+    statementBalances = []
+    for i in statementBalancesString.split(','):
+        statementBalances.append(int(i))
     avgStatementBalance = (sum(statementBalances) / len(statementBalances))
     avgutilization1 = avgStatementBalance/spendingLimit
     return avgutilization1
