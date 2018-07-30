@@ -74,7 +74,7 @@ message2 = "percent "
 def message3function():
     if utilization_score == "excellent":
         message3var = "(excellent)."
-    elif utilization_score == good":
+    elif utilization_score == "good":
         message3var = "(good)."
     elif utilization_score == "average":
         message3var = "(average)."
