@@ -8,6 +8,8 @@ def APR():
     return float1
 # Assign variable to value of APR() function call
 user_APR = APR()
+# Figure out user's spending limit
+spendingLimit = int(raw_input("What is your spending limit in dollars?"))
 # Tell the user what to type 
 # Change these values depending on the credit card's factors
 class CreditAccount:
@@ -17,7 +19,7 @@ class CreditAccount:
         self.AvgUtilization = AvgUtilization
         self.spendingLimit = spendingLimit
        
-Class Statements:
+class Statements:
     numberOfMonthlyStatements = 
     n = numberOfMonthytStatements
     
