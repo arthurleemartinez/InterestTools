@@ -17,7 +17,7 @@ def APR():
 def AvgUtilization():
     statementBalances = []
     for i in statementBalancesString.split(','):
-        statementBalances.append(int(i))
+        statementBalances.append(float(i))
     avgStatementBalance = (sum(statementBalances) / len(statementBalances))
     avgutilization1 = avgStatementBalance/spendingLimit
     return avgutilization1
