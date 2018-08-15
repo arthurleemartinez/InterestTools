@@ -28,7 +28,6 @@ def get_pay_check_cost() -> float:
     elif monthly_interest_cost > 27:
         pay_period_interest_cost = monthly_interest_cost
     return round(pay_period_interest_cost, 2)
-
 pay_check_cost: float = 2*round(get_pay_check_cost(),2)
 user_pay_check_amount = float(input("How much do you get paid every pay period?"))
 def get_paycheck_percentage():
